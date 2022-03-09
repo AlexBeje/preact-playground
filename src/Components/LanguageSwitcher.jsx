@@ -10,9 +10,10 @@ import { Button } from '@mantine/core';
 export function LanguageSwitcher() {
   const [localStorageLanguage, setlocalStorageLanguage] = useLocalStorageValue({
     key: 'i18nextLng',
-    default: 'en',
   });
   const { i18n } = useTranslation();
+
+  !localStorageLanguage && setlocalStorageLanguage('en');
 
   const switchLanguage = () => {
     if (localStorageLanguage === 'en') {
