@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
 
   return (
     <Button onClick={() => switchLanguage()}>
-      {i18n.language.toUpperCase()}
+      {i18n.language === 'en' ? 'EN' : 'ES'}
     </Button>
   );
 }
