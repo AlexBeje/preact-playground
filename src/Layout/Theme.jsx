@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 
 import { MantineProvider, ColorSchemeProvider } from '@mantine/core';
 
@@ -50,7 +50,7 @@ export function Theme({ children }) {
         withGlobalStyles
         withNormalizeCSS
       >
-        {children}
+        <Suspense fallback="...is loading">{children}</Suspense>
       </MantineProvider>
     </ColorSchemeProvider>
   );
