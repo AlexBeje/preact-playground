@@ -13,7 +13,9 @@ export function LanguageSwitcher() {
   });
   const { i18n } = useTranslation();
 
-  !localStorageLanguage && setlocalStorageLanguage('en');
+  !localStorageLanguage
+    ? setlocalStorageLanguage('en')
+    : setlocalStorageLanguage(localStorageLanguage);
 
   const switchLanguage = () => {
     if (localStorageLanguage === 'en') {
