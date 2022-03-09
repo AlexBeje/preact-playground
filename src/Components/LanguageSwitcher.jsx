@@ -15,11 +15,14 @@ export function LanguageSwitcher() {
     key: 'i18nextLng',
   });
   const { i18n } = useTranslation();
+  let language = localStorageLanguage;
 
   useEffect(() => {
     !localStorageLanguage
       ? setlocalStorageLanguage('en')
       : setlocalStorageLanguage(localStorageLanguage);
+
+    language = localStorageLanguage;
   }, []);
 
   const switchLanguage = () => {
@@ -33,8 +36,6 @@ export function LanguageSwitcher() {
   };
 
   return (
-    <Button onClick={() => switchLanguage()}>
-      {localStorageLanguage.toUpperCase()}
-    </Button>
+    <Button onClick={() => switchLanguage()}>{language.toUpperCase()}</Button>
   );
 }
