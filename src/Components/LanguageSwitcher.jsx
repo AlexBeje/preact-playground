@@ -15,7 +15,7 @@ export function LanguageSwitcher() {
     key: 'i18nextLng',
   });
   const { i18n } = useTranslation();
-  let language = localStorageLanguage;
+  let language = 'en';
 
   useEffect(() => {
     !localStorageLanguage
