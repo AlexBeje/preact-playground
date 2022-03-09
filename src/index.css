@@ -1,16 +1,1 @@
 @tailwind utilities;
-
-html,
-body {
-  font-family: 'Helvetica Neue', arial, sans-serif;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-#app {
-  height: 100%;
-  text-align: center;
-  color: #fff;
-}

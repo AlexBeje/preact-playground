@@ -3,6 +3,7 @@ import { Container, Grid, Center, Button } from '@mantine/core';
 
 import { useTranslation } from 'react-i18next';
 import { LanguageSwitcher } from '/src/Components/LanguageSwitcher';
+import { ThemeSwitcher } from '/src/Components/ThemeSwitcher';
 
 export function Home() {
   const { t } = useTranslation();
@@ -10,17 +11,18 @@ export function Home() {
   return (
     <Container className="h-screen">
       <Grid className="h-full">
-        <Grid.Col>
+        <Grid.Col className="flex justify-between pt-6">
+          <ThemeSwitcher />
           <LanguageSwitcher />
         </Grid.Col>
         <Grid.Col>
-          <Center>
+          <Center className="flex-col">
             <Logo />
+            <h1 class="text-3xl font-bold underline">{t('home.title')}</h1>
+            <Button component="a" href="https://preactjs.com/" target="_blank">
+              {t('home.button')}
+            </Button>
           </Center>
-          <h1 class="text-3xl font-bold underline">{t('home.title')}</h1>
-          <Button component="a" href="https://preactjs.com/" target="_blank">
-            {t('home.button')}
-          </Button>
         </Grid.Col>
       </Grid>
     </Container>
