@@ -8,6 +8,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^3.6.14",
+    "@mantine/dates": "^3.6.14",
+    "@mantine/dropzone": "^3.6.14",
+    "@mantine/hooks": "^3.6.14",
+    "@mantine/modals": "^3.6.14",
+    "@mantine/notifications": "^3.6.14",
+    "@mantine/prism": "^3.6.14",
+    "@mantine/rte": "^3.6.14",
+    "dayjs": "^1.10.8",
     "preact": "^10.5.15"
   },
   "devDependencies": {

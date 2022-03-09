@@ -1,4 +1,5 @@
-import { Logo } from './logo'
+import { Logo } from './logo';
+import { Button } from '@mantine/core';
 
 export function App(props) {
   return (
@@ -6,15 +7,10 @@ export function App(props) {
       <Logo />
       <p>Hello Vite + Preact!</p>
       <p>
-        <a
-          class="link"
-          href="https://preactjs.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Button href="https://preactjs.com/" target="_blank">
           Learn Preact
-        </a>
+        </Button>
       </p>
     </>
-  )
+  );
 }
