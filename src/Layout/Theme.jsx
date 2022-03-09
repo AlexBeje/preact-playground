@@ -50,7 +50,7 @@ export function Theme({ children }) {
         withGlobalStyles
         withNormalizeCSS
       >
-        <Suspense fallback="...is loading">{children}</Suspense>
+        {children}
       </MantineProvider>
     </ColorSchemeProvider>
   );
