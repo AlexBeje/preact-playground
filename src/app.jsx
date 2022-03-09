@@ -1,4 +1,4 @@
-import { Logo } from './logo';
+import { Logo } from '/src/Components/Logo';
 import { Button } from '@mantine/core';
 
 export function App(props) {
@@ -6,11 +6,9 @@ export function App(props) {
     <>
       <Logo />
       <p>Hello Vite + Preact!</p>
-      <p>
-        <Button href="https://preactjs.com/" target="_blank">
-          Learn Preact
-        </Button>
-      </p>
+      <Button href="https://preactjs.com/" target="_blank">
+        Learn Preact
+      </Button>
     </>
   );
 }
