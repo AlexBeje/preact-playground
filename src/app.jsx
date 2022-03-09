@@ -5,8 +5,8 @@ export function App(props) {
   return (
     <>
       <Logo />
-      <p>Hello Vite + Preact!</p>
-      <Button href="https://preactjs.com/" target="_blank">
+      <h1 class="text-3xl font-bold underline">Hello Vite + Preact!</h1>
+      <Button component="a" href="https://preactjs.com/" target="_blank">
         Learn Preact
       </Button>
     </>
