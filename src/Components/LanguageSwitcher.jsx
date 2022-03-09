@@ -1,3 +1,6 @@
+// React
+import { useEffect } from 'react';
+
 // Translations
 import { useTranslation } from 'react-i18next';
 
@@ -13,9 +16,11 @@ export function LanguageSwitcher() {
   });
   const { i18n } = useTranslation();
 
-  !localStorageLanguage
-    ? setlocalStorageLanguage('en')
-    : setlocalStorageLanguage(localStorageLanguage);
+  useEffect(() => {
+    !localStorageLanguage
+      ? setlocalStorageLanguage('en')
+      : setlocalStorageLanguage(localStorageLanguage);
+  }, []);
 
   const switchLanguage = () => {
     if (localStorageLanguage === 'en') {
