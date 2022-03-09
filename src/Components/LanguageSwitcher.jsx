@@ -8,9 +8,9 @@ export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
   const switchLanguage = () => {
-    i18n.language === 'en'
-      ? i18n.changeLanguage('es')
-      : i18n.changeLanguage('en');
+    i18n.language === 'es'
+      ? i18n.changeLanguage('en')
+      : i18n.changeLanguage('es');
   };
 
   return (
