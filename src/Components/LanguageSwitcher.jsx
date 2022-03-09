@@ -7,8 +7,6 @@ import { Button } from '@mantine/core';
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
 
-  console.log(i18n.language);
-
   const switchLanguage = () => {
     i18n.language === 'es'
       ? i18n.changeLanguage('en')
@@ -17,7 +15,7 @@ export function LanguageSwitcher() {
 
   return (
     <Button onClick={() => switchLanguage()}>
-      {i18n.language === 'en' ? 'EN' : 'ES'}
+      {i18n.language === 'es' ? 'ES' : 'EN'}
     </Button>
   );
 }
