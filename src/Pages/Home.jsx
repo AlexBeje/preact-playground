@@ -16,9 +16,13 @@ export function Home() {
           <LanguageSwitcher />
         </Grid.Col>
         <Grid.Col>
-          <Center className="flex-col">
+          <Center>
             <Logo />
-            <h1 class="text-3xl font-bold underline">{t('home.title')}</h1>
+          </Center>
+          <Center className="flex-col">
+            <h1 class="text-3xl font-bold underline text-center">
+              {t('home.title')}
+            </h1>
             <Button component="a" href="https://preactjs.com/" target="_blank">
               {t('home.button')}
             </Button>
