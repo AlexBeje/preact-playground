@@ -29,7 +29,24 @@ export function Theme({ children }) {
       toggleColorScheme={toggleColorScheme}
     >
       <MantineProvider
-        theme={{ colorScheme }}
+        theme={{
+          colorScheme,
+          colors: {
+            brand: [
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+              '#673AB8',
+            ],
+          },
+          primaryColor: 'brand',
+        }}
         withGlobalStyles
         withNormalizeCSS
       >
