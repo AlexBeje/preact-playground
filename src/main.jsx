@@ -2,4 +2,14 @@ import { render } from 'preact';
 import { App } from './app';
 import './index.css';
 
-render(<App />, document.getElementById('app'));
+import { MantineProvider } from '@mantine/core';
+
+// Translations
+import './i18n';
+
+render(
+  <MantineProvider theme={{ colorScheme: 'dark' }} withGlobalStyles>
+    <App />
+  </MantineProvider>,
+  document.getElementById('app')
+);
